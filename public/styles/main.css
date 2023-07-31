@@ -87,6 +87,7 @@ p {
     border-top: 1px solid #000;
 }
 
-.completed {
-    background-color: red;
+input:checked + p {
+    text-decoration: line-through;
+    text-decoration-color: #a683e3;
 }
