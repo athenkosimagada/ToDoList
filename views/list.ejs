@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+<section class="main">
+    <h1><%= listName %></h1>
+    <div class="container">
+        <form action="/" method="POST">
+            <div class="top">
+                <input type="text" placeholder="New Item" name="title">
+                <button type="submit" name="list" value="<%= listName %>" list="">+</button>
+            </div>
+        </form>
+
+        <% tasks.forEach(task => { %>
+            <form action="/delete" method="POST">
+                <div class="item">
+                    <input class="checkbox" name="checkbox" value="<%= task._id %>" type="checkbox" onchange="this.form.submit()">
+                    <p><%= task.name %></p>
+                </div>
+                <input type="hidden" name="listName" value="<%= listName %>"></input>
+            </form>
+          <% }); %>
+    </div>
+</section>
+<%- include("partials/footer.ejs") %>
