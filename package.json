@@ -17,6 +17,9 @@
     "lodash": "^4.17.21",
     "mongoose": "^7.4.2"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "description": "",
   "devDependencies": {
     "nodemon": "3.0.1"
